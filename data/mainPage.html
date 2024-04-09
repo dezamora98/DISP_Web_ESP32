@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>main</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <input type="text" style="opacity: 0%;" id="input-field">
+    <div class="container">
+        <form class="form-group">
+
+            <select class="language-select-container" id="language" onchange="translatePage()">
+                <option value="en">EN</option>
+                <option value="de">DE</option>
+            </select>
+
+            <br />
+            <div class="form-group">
+                <div class="HorizontalDiv">
+                    <label id="lb_user">User:</label>
+                    <label id="user"></label>
+                </div>
+                <div class="HorizontalDiv">
+                    <label id="lb_consumed">Consumed (L):</label>
+                    <label id="consumed"></label>
+                </div>
+            </div>
+            <br />
+
+            <div class="form-group">
+                <div class="HorizontalDiv">
+                    <label id="lb_counter">Counter (L):</label>
+                    <label class="dosumed" id="dosumed" disabled></label>
+                </div>
+                <div class="HorizontalDiv">
+                    <label id="lb_quantity">Quantity (L):</label>
+                    <div class="HorizontalDiv">
+                        <input type="number" min="0" max="200" inputmode="numeric" id="quantity" onchange="Quantity()"
+                            onkeyup="Quantity()" onkeydown="checkEnter(event)" />
+                    </div>
+                </div>
+            </div>
+
+            <br />
+            <div class="HorizontalDiv" id="buttons">
+                <input type="button" style="width: 100%; margin: 10px;" class="start" id="start-button" value="START"
+                    onclick="StartStop()" disabled />
+                <input type="button" style="width: 100%; margin: 10px;" class="logout" id="logout-button" value="LOGOUT"
+                    onclick="LogOut()" />
+            </div>
+        </form>
+    </div>
+</body>
+<script src="mainScript.js"></script>
+
+</html>

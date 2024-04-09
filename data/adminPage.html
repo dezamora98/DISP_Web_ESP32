@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Admin</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <button class="floating-button" onclick="Exit()">Exit</button>
+
+        <form class="form-group" id="addNewUser">
+            <label for="new-username">Username:</label>
+            <input type="text" id="new-username" required>
+            <label for="new-password">Password:</label>
+            <input type="password" id="new-password" required>
+            <input type="submit" style="margin: 2% 2% 0% 0%;" value="Add new user">
+        </form>
+
+        <form id="changeAdmin" class="form-group">
+            <label for="admin-username">Admin username:</label>
+            <input type="text" id="admin-username" required />
+            <label for="admin-password">Admin password:</label>
+            <input type="password" id="admin-password" required />
+            <input type="submit" style="margin: 2% 2% 0% 0%;" value="Save">
+        </form>
+
+        <form class="form-group" id="changeConstant" style="display: flex; justify-content: space-between;">
+            <div>
+                <label for="constant">Constant P/L:</label>
+                <input type="number" id="constant" required>
+            </div>
+            <input type="submit" value="Save">
+        </form>
+
+        <form class="form-group" id="changeWifiMode">
+            <label for="connection-mode">WiFi mode:</label>
+            <div class="form-group" style="display: flex; justify-content: space-between;">
+                <select id="connection-mode">
+                    <option value="0">Host</option>
+                    <option value="1">Client</option>
+                </select>
+                <input type="submit" value="Save">
+            </div>
+
+            <div class="form-group">
+                <label for="ssid">SSID:</label>
+                <input type="text" id="ssid" required>
+                <label for="wifi-password">Password:</label>
+                <input type="password" id="wifi-password" minlength="8" required>
+            </div>
+        </form>
+
+    </div>
+</body>
+<script src="adminScript.js"></script>
+
+</html>

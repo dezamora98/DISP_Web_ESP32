@@ -1,0 +1,153 @@
+:root {
+    --background-color: #f5f5f5;
+    --form-background-color: white;
+    --border-color: #6f6e6e;
+    --text-color: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #1c1c1e;
+        --form-background-color: #383838;
+        --border-color: #6f6e6e;
+        --text-color: white;
+    }
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 6vw;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    min-width: 300px;
+    max-width: auto;
+    margin: 1% auto;
+    padding: 5%;
+}
+
+option,
+select {
+    font-size: 3vw;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    text-align: center;
+    size: 20px;
+    padding: 2vw;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.floating-button,
+input {
+    margin: 5vw;
+    border: none;
+    border-radius: 10%;
+}
+
+.form-group {
+    border: 1px solid var(--border-color);
+    background-color: var(--form-background-color);
+    border-radius: 20px;
+    margin-bottom: 2%;
+    padding: 4%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.language-select-container{
+    display: flex;
+    justify-content: flex-start;
+    float:right;
+    margin-bottom: 2%;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 2% 2% 2% 0%;
+    color: var(--text-color);
+}
+
+.floating-button,
+input {
+    margin: 0;
+    border: none;
+    font-size: 4vw;
+    border-radius: 20px;
+}
+
+.floating-button {
+    position: fixed;
+    right: 20px;
+    z-index: 100;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 2%;
+    box-sizing: border-box;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+}
+
+.floating-button,
+input[type="submit"] {
+    display: block;
+    margin: 0;
+    padding: 3%;
+    background-color: #007aff;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.start[value="START"],
+.start[value="STARTEN"],
+input[type="submit"]:hover {
+    background-color: #0066cc;
+}
+
+input[type="button"] {
+    padding: 4vw;
+    color: white;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    min-width: 125px;
+    min-height: 50px;
+    max-width: auto;
+    max-height: auto;
+}
+
+input[type = "number"]
+{
+    text-align: center;
+}
+
+.logout,
+.start[value="STOP"],
+.start[value="ANHALTEN"] {
+    background-color: #ff0033;
+}
+
+.dosumed:disabled,
+.logout:disabled,
+.start:disabled {
+    opacity: 20%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.HorizontalDiv {
+    display: flex;
+    justify-content: space-between;
+}

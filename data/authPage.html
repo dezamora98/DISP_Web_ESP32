@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="login-form" class="form-group">
+
+            <select class="language-select-container" id="language" onchange="translatePage()">
+                <option value="en">EN</option>
+                <option value="de">DE</option>
+            </select>
+
+            <label for="username" id="username-label">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password" id="password-label">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br />
+            <input type="submit" style="width: 100%; margin: 0;" value="Submit" id="submit-button">
+        </form>
+    </div>
+</body>
+<script src="authScript.js"></script>
+
+</html>
